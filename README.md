@@ -15,6 +15,15 @@ First add the following JS:
   - Make sure to bind to `#hide_this`
 - Add `hide.js` to your JS manifest.
 
+**Note:** If declaring any variables in your JavaScript file, use `var` instead of `let` or `const` or else Capybara will throw this error:
+
+```bash
+Capybara::Poltergeist::JavascriptError:
+One or more errors were raised in the Javascript code on the page. If you don't care about
+these errors, you can ignore them by setting js_errors: false in your Poltergeist configuration (s
+ee documentation for details).
+```
+
 Next add the following CSS:
 
 - In `/app/assets/stylesheets/` create the file `links.css`
